@@ -1,0 +1,14 @@
+[global]
+	origin = bottom-right
+	width = (200, 400)
+	offset = 80x90
+	progress_bar = false
+	separator_height = 5
+	frame_width = 1
+	gap_size = 4
+	line_height = 2
+	format = "<b>%a | %s</b>\n%b"
+	corner_radius = 5
+	
+	background = "#0005"
+	frame_color = "#3cb"
