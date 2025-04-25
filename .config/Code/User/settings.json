@@ -1,0 +1,23 @@
+{
+    "editor.fontFamily": "'Fira Code'",
+    "files.autoSave": "afterDelay",
+    "editor.wordWrap": "on",
+    "editor.tabSize": 2,
+    "editor.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.lineHeight": 2,
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.editor.showTabs": "single",
+    "json.schemas": [
+
+
+    ],
+    "editor.fontSize": 15,
+    "explorer.confirmDelete": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "explorer.confirmDragAndDrop": false
+}
