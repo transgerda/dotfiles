@@ -4,27 +4,26 @@ const time = Variable('', {
     }],
 })
 
-const battery = await Service.import('battery');
+const battery = await Service.import('battery')
 
 const Bar = (/** @type {number} */ monitor) => Widget.Window({
     monitor,
     name: `bar${monitor}`,
-    anchor: ['bottom', 'left', 'right'],
+    anchor: ['top', 'left', 'right'],
     exclusivity: 'exclusive',
-   
     child: Widget.CenterBox({
         start_widget: Widget.Label({
             hpack: 'center',
             label: 'Welcome to AGS!',
         }),
-	batt_widget: Widget.Label({
-	    hpack: 'center',
-	    label: battery,
-	}),
         end_widget: Widget.Label({
             hpack: 'center',
             label: time.bind(),
         }),
+	    batteryWidget: Widget.Label({
+		hpack: 'center',
+		    label: battery,
+	    }),
     }),
 })
 
