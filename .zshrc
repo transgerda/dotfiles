@@ -101,15 +101,16 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias zshconfig="nvim ~/.zshrc"
+alias zshsource="source ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 plugins=(git zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 alias batt="cat /sys/class/power_supply/BAT1/capacity"
+alias statt="cat /sys/class/power_supply/BAT1/status"
 alias w="curl wttr.in"
 alias ww="curl wttr.in/Winterswijk"
-alias nixos-rebuild="sudo nixos-rebuild switch --flake /home/martijn/.nixrc"
 alias tmp="cd `mktemp -d`"
 #alias school="cd ~/Documents/school/SD1B"
 alias vim="nvim"
@@ -124,10 +125,18 @@ alias a="lsd -lah"
 alias wifi="nmtui"
 alias mkblazor="dotnet new blazorwasm -o"
 alias blazor-start="firefox --new-window http://localhost:5237 & ;dotnet watch run debug"
+alias nix-rebuild="sudo nixos-rebuild switch --flake /home/martijn/.nixrc"
 alias b="ping nos.nl"
+alias cp="cp -v"
+alias mv="mv -v"
+alias 'cd ...'="cd ../.."
+alias toetslocker="java -jar ~/Downloads/Toetslocker_22.jar"
+alias sql='mysql -u root --password=""'
+alias llama='ollama run llama3.2:3b'
+alias fix-bootloader='sudo nixos-rebuild --install-bootloader boot -I nixos-config=/home/martijn/.nixrc/configuration.nix'
 
 function school() {
-	if [ -z "$1" ]; then
+  if [ -z "$1" ]; then
 		cd ~/Documents/school/SD1B || return
 	elif [ "$1" = "php" ]; then
 		cd ~/Documents/school/SD1B/PHP || return
@@ -149,8 +158,9 @@ function school() {
 		cd ~/Documents/school/SD1B/Workshop || return
 	elif [ "$1" = "dotnet" ]; then
 		cd ~/Documents/school/SD1B/dotnet || return
-
-	else 
+  elif [ "$1" = "lb" ]; then
+		cd ~/Documents/school/SD1B/LB || return
+	else
 		cd ~/Documents/school/SD1B || return
 	fi
 }
@@ -171,4 +181,6 @@ function scrn() {
 	brightnessctl -q -s set $1
 }
 
-
+function sqldump() {
+       mysqldump -u root --password="" $1 > $1.sql
+}

@@ -1,4 +1,5 @@
 {
+    "vscode_custom_css.imports": ["/home/martijn/.config/Code/custom.css"],
     "editor.fontFamily": "'Fira Code'",
     "files.autoSave": "afterDelay",
     "editor.wordWrap": "on",
@@ -10,14 +11,24 @@
     "editor.cursorBlinking": "smooth",
     "editor.lineHeight": 2,
     "editor.fontLigatures": true,
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "Cobalt2",
     "workbench.editor.showTabs": "single",
     "json.schemas": [
 
 
     ],
-    "editor.fontSize": 15,
+    "editor.fontSize": 16,
     "explorer.confirmDelete": false,
     "workbench.iconTheme": "material-icon-theme",
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "git.confirmSync": false,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "liveServer.settings.donotVerifyTags": true,
+    "workbench.sideBar.location": "right",
+    "editor.linkedEditing": true
 }

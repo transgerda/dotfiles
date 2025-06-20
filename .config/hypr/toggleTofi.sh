@@ -1,6 +1,6 @@
-pkill tofi
+pkill rofi
 
 if [[ $? -eq 1 ]]; then
-	tofi-run --drun-launch=true | sh
+	rofi -show drun | sh
 fi
 
