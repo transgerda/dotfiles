@@ -1,14 +1,12 @@
-/* Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com> */
-
 /* Colors */
 
 * {
-  background:    #1a1b26;
-  background-alt: #16161e;
-  //border:        #89ddff;
-  border:        #7aa2f7;
-  foreground:    #c0caf5;
-  selected:      #7aa2f7;
-  active:        #7aa2f7;
-  urgent:        #f7768e;
+  background: rgba(26, 38, 27, 0.4); /* Adjusted to a more greenish tint */
+  background-alt: rgba(22, 30, 22, 0.4); /* Adjusted to a more greenish tint */
+  border: rgba(74, 170, 13, 1); /* Updated border color to match the new green tint */
+  foreground: #a0d8a0; /* Changed to a greenish tint */
+  selected: rgba(74, 170, 13, 1); /* Updated to the new color */
+  active: rgba(74, 170, 13, 1); /* Updated to the new color */
+  urgent: rgba(0, 180, 0, 0.8); /* Adjusted to a more vibrant green */
 }
+

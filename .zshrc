@@ -114,26 +114,26 @@ alias ww="curl wttr.in/Winterswijk"
 alias tmp="cd `mktemp -d`"
 #alias school="cd ~/Documents/school/SD1B"
 alias vim="nvim"
-alias tijd="date +%T | toilet"
-alias datum="date +%d/%b/%+4Y | toilet"
 alias dvp="hyprctl keyword input:kb_variant \"dvp\""
 alias undo-dvp="hyprctl keyword input:kb_variant \"\""
 alias aoeu="hyprctl keyword input:kb_variant \"\""
 alias sql="mysql -u root"
+alias 'rm -rf'='~/dotfiles/.rm-rf-confirmation.sh'
 alias casm="~/Documents/casm/casm"
 alias a="lsd -lah"
-alias wifi="nmtui"
 alias mkblazor="dotnet new blazorwasm -o"
 alias blazor-start="firefox --new-window http://localhost:5237 & ;dotnet watch run debug"
 alias nix-rebuild="sudo nixos-rebuild switch --flake /home/martijn/.nixrc"
 alias b="ping nos.nl"
 alias cp="cp -v"
 alias mv="mv -v"
-alias 'cd ...'="cd ../.."
+alias "..."="../.."
+alias "...."="../../.."
 alias toetslocker="java -jar ~/Downloads/Toetslocker_22.jar"
-alias sql='mysql -u root --password=""'
 alias llama='ollama run llama3.2:3b'
 alias fix-bootloader='sudo nixos-rebuild --install-bootloader boot -I nixos-config=/home/martijn/.nixrc/configuration.nix'
+alias wifi-off='nmcli radio wifi off'
+alias wifi-on='nmcli radio wifi on'
 
 function school() {
   if [ -z "$1" ]; then
@@ -182,5 +182,5 @@ function scrn() {
 }
 
 function sqldump() {
-       mysqldump -u root --password="" $1 > $1.sql
+       mysqldump -u root --password="" $1 > ~/Downloads/$1.sql
 }
