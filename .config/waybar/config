@@ -1,0 +1,29 @@
+{
+  "layer": "top", // Waybar at top layer
+  "position": "top", // Waybar position (top|bottom|left|right)
+  "height": 20,
+  "margin": "0 0 0 0",
+  //"width": 1350, // Waybar width
+  // Choose the order of the modules idle_inhibitor
+  "modules-left": [
+    "custom/launcher",
+    "battery",
+    // "sway/workspaces"
+    // "custom/swap",
+    "tray"
+  ],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "backlight",
+    "custom/volume",
+    "network",
+    "idle_inhibitor",
+  ],
+
+
+    // Load Modules
+    "include": ["~/.config/waybar/modules.json"],
+
+  // Modules configuration
+
+}
