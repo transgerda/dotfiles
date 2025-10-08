@@ -184,3 +184,5 @@ function scrn() {
 function sqldump() {
        mysqldump -u root --password="" $1 > ~/Downloads/$1.sql
 }
+
+alias scpmc="scp Downloads/2025\ SMP.tar.gz martijn@192.168.2.2:/home/martijn/server.tar.gz"

@@ -16,6 +16,7 @@
   "modules-right": [
     "backlight",
     "custom/volume",
+    "pulseaudio/slider",
     "network",
     "idle_inhibitor",
   ],

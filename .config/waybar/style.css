@@ -102,6 +102,7 @@ window#waybar {
 #custom-launcher,
 #custom-system,
 #custom-volume,
+#pulseaudio-slider,
 #mpd {
     padding: 5px 8px;
     border-style: solid;
@@ -111,9 +112,37 @@ window#waybar {
     font-weight: bold;
 }
 
-#custom-volume {
+#pulseaudio-slider {
     border-radius: 0 10px 10px 0;
+    padding-right: 10px
+}
+
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 10px;
+}
+#pulseaudio-slider trough {
+    min-height: 12px;
+    min-width: 100px;
+    border-radius: 5px;
+    background-color: black;
+    border-radius: 10px;
+}
+#pulseaudio-slider highlight {
+    min-width: 15px;
+    border-radius: 5px;
+    background-color: darkgreen;
+    border-radius: 10px;
+}
+
+#custom-volume {
     color: @base;
+    padding-right: 0;
 }
 
 /* -----------------------------------------------------------------------------

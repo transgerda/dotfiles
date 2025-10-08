@@ -39,6 +39,15 @@
     // Commands to execute on events
     "on-click": "mpc -q pause && mpc -q prev && mpc -q start"
   },
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal",
+    "format": "{icon} {volume}%",
+    "icon": "🔊",  // Default icon for volume
+    "icon-muted": "🔇", // Icon for muted state
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+  },
   "mpd#3": {
     "interval": 1,
     "format": "{stateIcon}",
@@ -102,7 +111,7 @@
   },
   "custom/volume": {
     "exec": "~/.config/waybar/scripts/volume-slider.sh",
-    "interval": 1,
+    "interval": 0,
     "on-scroll-up": "pamixer -i 5",
     "on-scroll-down": "pamixer -d 5",
     "on-click": "pamixer --toggle-mute",
