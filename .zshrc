@@ -135,6 +135,11 @@ alias fix-bootloader='sudo nixos-rebuild --install-bootloader boot -I nixos-conf
 alias wifi-off='nmcli radio wifi off'
 alias wifi-on='nmcli radio wifi on'
 
+function ngr() {
+	cd /home/martijn/tuwi
+	ddev share --ngrok-args "--domain toucan-tough-unduly.ngrok-free.app"
+}
+
 function school() {
   if [ -z "$1" ]; then
 		cd ~/Documents/school/SD1B || return
