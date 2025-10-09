@@ -43,7 +43,7 @@
     "min": 0,
     "max": 100,
     "orientation": "horizontal",
-    "format": "{icon} {volume}%",
+    "format": "{icon}",
     "icon": "🔊",  // Default icon for volume
     "icon-muted": "🔇", // Icon for muted state
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
