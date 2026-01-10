@@ -24,4 +24,3 @@ BAR+=$(printf '░%.0s' $(seq 1 $EMPTY))
 
 # Output JSON for Waybar
 echo "$ICON $VOL%"
-

@@ -44,8 +44,8 @@
     "max": 100,
     "orientation": "horizontal",
     "format": "{icon}",
-    "icon": "🔊",  // Default icon for volume
-    "icon-muted": "🔇", // Icon for muted state
+    "icon": "🔊", 
+    "icon-muted": "🔇",
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
   },
   "mpd#3": {
@@ -111,11 +111,11 @@
   },
   "custom/volume": {
     "exec": "~/.config/waybar/scripts/volume-slider.sh",
-    "interval": 0,
+    "interval": 1,
     "on-scroll-up": "pamixer -i 5",
     "on-scroll-down": "pamixer -d 5",
     "on-click": "pamixer --toggle-mute",
-    "tooltip": false,
+    "tooltip": false
   },
   "backlight": {
     // "device": "acpi_video1",
