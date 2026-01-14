@@ -43,10 +43,18 @@
     "min": 0,
     "max": 100,
     "orientation": "horizontal",
-    "format": "{icon}",
+    "format": "{icon   }",
     "icon": "🔊", 
     "icon-muted": "🔇",
-    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click": "pamixer --toggle-mute"
+  },
+  "custom/volume": {
+    "exec": "~/.config/waybar/scripts/volume-slider.sh",
+    "interval": 1,
+    "on-scroll-up": "pamixer -d 1",
+    "on-scroll-down": "pamixer -i 1",
+    "on-click": "pamixer --toggle-mute",
+    "tooltip": false
   },
   "mpd#3": {
     "interval": 1,
@@ -109,22 +117,14 @@
     // "format-alt": "  {:%Y-%m-%d  %H:%M:%S}",
     "interval": 1
   },
-  "custom/volume": {
-    "exec": "~/.config/waybar/scripts/volume-slider.sh",
-    "interval": 1,
-    "on-scroll-up": "pamixer -i 5",
-    "on-scroll-down": "pamixer -d 5",
-    "on-click": "pamixer --toggle-mute",
-    "tooltip": false
-  },
   "backlight": {
     // "device": "acpi_video1",
     "format": "{icon} {percent: >3}%",
     // "format-icons": ["", ""],
         "format-icons": ["", "", "", "", "", "", "", "", ""],
-    "on-scroll-down": "brightnessctl -c backlight set 5%-",
+    "on-scroll-down": "brightnessctl -c backlight set +1%",
     // "on-scroll-down": "light -A 5 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob",
-    "on-scroll-up": "brightnessctl -c backlight set +5%",
+    "on-scroll-up": "brightnessctl -c backlight set 1%-",
     // "on-scroll-up": "light -U 5 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob"
     "on-click": ""
   },

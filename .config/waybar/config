@@ -12,7 +12,7 @@
     // "custom/swap",
     "tray"
   ],
-  "modules-center": ["clock"],
+  "modules-center": ["clock", "mpd"],
   "modules-right": [
     "backlight",
     "custom/volume",
