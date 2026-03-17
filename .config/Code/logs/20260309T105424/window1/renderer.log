@@ -1,0 +1,31 @@
+2026-03-09 10:54:26.964 [info] ChatSessionStore: Migrating 0 chat sessions from storage service to file system
+2026-03-09 10:54:27.067 [info] Started local extension host with pid 120520.
+2026-03-09 10:54:27.606 [info] MCP Registry configured: https://api.mcp.github.com
+2026-03-09 10:54:27.646 [info] Settings Sync: Account status changed from uninitialized to unavailable
+2026-03-09 10:54:29.660 [info] [perf] Render performance baseline is 13ms
+2026-03-09 10:54:48.480 [info] ChatSessionStore: Migrating 0 chat sessions from storage service to file system
+2026-03-09 10:54:48.541 [info] Started local extension host with pid 120909.
+2026-03-09 10:54:48.924 [info] MCP Registry configured: https://api.mcp.github.com
+2026-03-09 10:54:48.948 [info] Settings Sync: Account status changed from uninitialized to unavailable
+2026-03-09 10:54:51.117 [info] [perf] Render performance baseline is 13ms
+2026-03-09 10:54:59.814 [error] [Extension Host] SyntaxError: "undefined" is not valid JSON
+	at JSON.parse (<anonymous>)
+	at get localStorage (/home/martijn/.vscode/extensions/hediet.vscode-drawio-1.9.0/dist/extension/index.js:2:128080)
+	at /home/martijn/.vscode/extensions/hediet.vscode-drawio-1.9.0/dist/extension/index.js:2:144495
+	at ct (/home/martijn/.vscode/extensions/hediet.vscode-drawio-1.9.0/dist/extension/index.js:2:56924)
+	at e.DrawioClientFactory.getOfflineHtml (/home/martijn/.vscode/extensions/hediet.vscode-drawio-1.9.0/dist/extension/index.js:2:144487)
+	at e.DrawioClientFactory.getHtml (/home/martijn/.vscode/extensions/hediet.vscode-drawio-1.9.0/dist/extension/index.js:2:144216)
+	at /home/martijn/.vscode/extensions/hediet.vscode-drawio-1.9.0/dist/extension/index.js:2:142150
+	at s (/home/martijn/.vscode/extensions/hediet.vscode-drawio-1.9.0/dist/extension/index.js:2:70557)
+	at st (/home/martijn/.vscode/extensions/hediet.vscode-drawio-1.9.0/dist/extension/index.js:2:56253)
+	at t.track (/home/martijn/.vscode/extensions/hediet.vscode-drawio-1.9.0/dist/extension/index.js:2:67551)
+	at t.onInvalidate (/home/martijn/.vscode/extensions/hediet.vscode-drawio-1.9.0/dist/extension/index.js:2:70501)
+	at t.runReaction (/home/martijn/.vscode/extensions/hediet.vscode-drawio-1.9.0/dist/extension/index.js:2:67381)
+	at Qt (/home/martijn/.vscode/extensions/hediet.vscode-drawio-1.9.0/dist/extension/index.js:2:69078)
+	at qt (/home/martijn/.vscode/extensions/hediet.vscode-drawio-1.9.0/dist/extension/index.js:2:68711)
+	at Yt (/home/martijn/.vscode/extensions/hediet.vscode-drawio-1.9.0/dist/extension/index.js:2:68767)
+	at t.schedule (/home/martijn/.vscode/extensions/hediet.vscode-drawio-1.9.0/dist/extension/index.js:2:67185)
+	at ce (/home/martijn/.vscode/extensions/hediet.vscode-drawio-1.9.0/dist/extension/index.js:2:70571)
+	at e.DrawioClientFactory.<anonymous> (/home/martijn/.vscode/extensions/hediet.vscode-drawio-1.9.0/dist/extension/index.js:2:141939)
+	at Generator.next (<anonymous>)
+	at s (/home/martijn/.vscode/extensions/hediet.vscode-drawio-1.9.0/dist/extension/index.js:2:141083)

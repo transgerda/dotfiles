@@ -1,0 +1,12 @@
+2026-02-03 10:45:20.277 [info] Extension host with pid 33844 started
+2026-02-03 10:45:20.277 [info] Skipping acquiring lock for /home/martijn/.config/Code/User/workspaceStorage/0e18c4f5f15b0d73a11cc6be82488fb4.
+2026-02-03 10:45:20.292 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2026-02-03 10:45:20.308 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2026-02-03 10:45:20.349 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2026-02-03 10:45:20.352 [info] ExtensionService#_doActivateExtension vscode.npm, startup: true, activationEvent: 'workspaceContains:package.json'
+2026-02-03 10:45:20.376 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2026-02-03 10:45:20.421 [info] Eager extensions activated
+2026-02-03 10:45:20.429 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2026-02-03 10:45:20.431 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2026-02-03 10:45:22.837 [info] Extension host terminating: renderer closed the MessagePort
+2026-02-03 10:45:22.842 [info] Extension host with pid 33844 exiting with code 0

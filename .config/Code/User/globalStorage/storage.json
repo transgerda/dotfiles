@@ -1,0 +1,87 @@
+{
+    "telemetry.sqmId": "",
+    "telemetry.machineId": "c29f72e0d2e51cfb9cb01780da6f32885da02750c4c5d2480566b94213e9fea6",
+    "telemetry.devDeviceId": "7565230c-dddc-4247-8c8f-722e2e302007",
+    "backupWorkspaces": {
+        "workspaces": [],
+        "folders": [
+            {
+                "folderUri": "file:///home/martijn/uml"
+            }
+        ],
+        "emptyWindows": []
+    },
+    "windowControlHeight": 35,
+    "profileAssociations": {
+        "workspaces": {
+            "file:///tmp/tmp.18a0tzjUjI/huts": "__default__profile__",
+            "file:///home/martijn/RiderProjects/Periode%207/SnackAutomaat": "__default__profile__",
+            "file:///home/martijn/uml": "__default__profile__"
+        },
+        "emptyWindows": {}
+    },
+    "windowsState": {
+        "lastActiveWindow": {
+            "folder": "file:///home/martijn/uml",
+            "backupPath": "/home/martijn/.config/Code/Backups/20096179bccb185674992dc0c2312b54",
+            "uiState": {
+                "mode": 1,
+                "x": 2,
+                "y": 39,
+                "width": 956,
+                "height": 1039
+            }
+        },
+        "openedWindows": []
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#1f1f1f",
+    "windowSplash": {
+        "zoomLevel": 0,
+        "baseTheme": "vs-dark",
+        "colorInfo": {
+            "foreground": "#cccccc",
+            "background": "#1f1f1f",
+            "editorBackground": "#1f1f1f",
+            "titleBarBackground": "#181818",
+            "titleBarBorder": "#2b2b2b",
+            "activityBarBackground": "#181818",
+            "activityBarBorder": "#2b2b2b",
+            "sideBarBackground": "#181818",
+            "sideBarBorder": "#2b2b2b",
+            "statusBarBackground": "#181818",
+            "statusBarBorder": "#2b2b2b",
+            "statusBarNoFolderBackground": "#1f1f1f"
+        },
+        "layoutInfo": {
+            "sideBarSide": "right",
+            "editorPartMinWidth": 220,
+            "titleBarHeight": 35,
+            "activityBarWidth": 48,
+            "sideBarWidth": 239,
+            "auxiliaryBarWidth": 239,
+            "statusBarHeight": 22,
+            "windowBorder": false
+        }
+    },
+    "windowSplashWorkspaceOverride": {
+        "layoutInfo": {
+            "sideBarWidth": 239,
+            "auxiliaryBarWidth": 239,
+            "workspaces": {
+                "0e18c4f5f15b0d73a11cc6be82488fb4": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "78816d2ce5ae689856409f46cce292c2": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "b77086e09fdb56b17fbc930cbae38929": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                }
+            }
+        }
+    }
+}

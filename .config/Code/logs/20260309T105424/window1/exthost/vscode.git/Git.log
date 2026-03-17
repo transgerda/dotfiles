@@ -1,0 +1,24 @@
+2026-03-09 10:54:31.484 [info] [main] Log level: Info
+2026-03-09 10:54:31.484 [info] [main] Validating found git in: "git"
+2026-03-09 10:54:31.484 [info] [main] Using git "2.51.2" from "git"
+2026-03-09 10:54:31.484 [info] [Model][doInitialScan] Initial repository scan started
+2026-03-09 10:54:31.484 [info] > git rev-parse --show-toplevel [4ms]
+2026-03-09 10:54:31.489 [info] > git rev-parse --show-toplevel [1ms]
+2026-03-09 10:54:31.495 [info] > git rev-parse --show-toplevel [1ms]
+2026-03-09 10:54:31.500 [info] > git rev-parse --show-toplevel [1ms]
+2026-03-09 10:54:31.505 [info] > git rev-parse --show-toplevel [2ms]
+2026-03-09 10:54:31.510 [info] > git rev-parse --show-toplevel [1ms]
+2026-03-09 10:54:31.512 [info] [Model][doInitialScan] Initial repository scan completed - repositories (0), closed repositories (0), parent repositories (1), unsafe repositories (0)
+2026-03-09 10:54:50.285 [info] [main] Log level: Info
+2026-03-09 10:54:50.285 [info] [main] Validating found git in: "git"
+2026-03-09 10:54:50.285 [info] [main] Using git "2.51.2" from "git"
+2026-03-09 10:54:50.285 [info] [Model][doInitialScan] Initial repository scan started
+2026-03-09 10:54:50.285 [info] > git rev-parse --show-toplevel [4ms]
+2026-03-09 10:54:50.285 [info] fatal: not a git repository (or any of the parent directories): .git
+2026-03-09 10:54:50.285 [info] [Model][doInitialScan] Initial repository scan completed - repositories (0), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2026-03-09 10:54:51.004 [info] > git rev-parse --show-toplevel [1ms]
+2026-03-09 10:54:51.004 [info] fatal: not a git repository (or any of the parent directories): .git
+2026-03-09 10:54:55.171 [info] > git rev-parse --show-toplevel [1ms]
+2026-03-09 10:54:55.171 [info] fatal: not a git repository (or any of the parent directories): .git
+2026-03-09 10:55:01.347 [info] > git rev-parse --show-toplevel [29ms]
+2026-03-09 10:55:01.347 [info] fatal: not a git repository (or any of the parent directories): .git
