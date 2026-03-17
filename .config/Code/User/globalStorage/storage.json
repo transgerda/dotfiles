@@ -6,7 +6,7 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///home/martijn/uml"
+                "folderUri": "file:///home/martijn/dotfiles/.config/waybar"
             }
         ],
         "emptyWindows": []
@@ -16,19 +16,20 @@
         "workspaces": {
             "file:///tmp/tmp.18a0tzjUjI/huts": "__default__profile__",
             "file:///home/martijn/RiderProjects/Periode%207/SnackAutomaat": "__default__profile__",
-            "file:///home/martijn/uml": "__default__profile__"
+            "file:///home/martijn/uml": "__default__profile__",
+            "file:///home/martijn/dotfiles/.config/waybar": "__default__profile__"
         },
         "emptyWindows": {}
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/martijn/uml",
-            "backupPath": "/home/martijn/.config/Code/Backups/20096179bccb185674992dc0c2312b54",
+            "folder": "file:///home/martijn/dotfiles/.config/waybar",
+            "backupPath": "/home/martijn/.config/Code/Backups/52949a224ded4bd47d7b3fdafc8ec4f8",
             "uiState": {
                 "mode": 1,
-                "x": 2,
+                "x": 98,
                 "y": 39,
-                "width": 956,
+                "width": 1820,
                 "height": 1039
             }
         },
@@ -58,16 +59,16 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 35,
             "activityBarWidth": 48,
-            "sideBarWidth": 239,
-            "auxiliaryBarWidth": 239,
+            "sideBarWidth": 170,
+            "auxiliaryBarWidth": 170,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowSplashWorkspaceOverride": {
         "layoutInfo": {
-            "sideBarWidth": 239,
-            "auxiliaryBarWidth": 239,
+            "sideBarWidth": 170,
+            "auxiliaryBarWidth": 170,
             "workspaces": {
                 "0e18c4f5f15b0d73a11cc6be82488fb4": {
                     "sideBarVisible": true,
@@ -78,6 +79,10 @@
                     "auxiliaryBarVisible": true
                 },
                 "b77086e09fdb56b17fbc930cbae38929": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "a43cfad9e0ddb0f64703b21a277decc0": {
                     "sideBarVisible": true,
                     "auxiliaryBarVisible": true
                 }
