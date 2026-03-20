@@ -1,7 +1,7 @@
 {
     "modules-left": ["custom/power", "battery", "tray"],
     "modules-center": ["clock"],
-    "modules-right": ["bluetooth", "pulseaudio", "network"],
+    "modules-right": ["pulseaudio", "network"],
 
     "custom/power": {
         "format" : "⭘ ",
