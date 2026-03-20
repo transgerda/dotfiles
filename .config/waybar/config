@@ -1,7 +1,7 @@
 {
     "modules-left": ["custom/power", "battery", "tray"],
     "modules-center": ["clock"],
-    "modules-right": ["bluetooth", "network", "pulseaudio"],
+    "modules-right": ["bluetooth", "pulseaudio", "network"],
 
     "custom/power": {
         "format" : "⭘ ",
@@ -64,7 +64,7 @@
             "headset": " ",
             "default": [" "],
         },
-        "on-click": "pavucontrol",
+        //"on-click": "pavucontrol",
     },
 
     "clock": {
