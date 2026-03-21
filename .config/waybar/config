@@ -1,7 +1,7 @@
 {
     "modules-left": ["custom/power", "battery", "custom/music", "tray"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network"],
+    "modules-right": ["pulseaudio", "network", "custom/swaync"],
 
     "custom/power": {
         "format" : "⭘ ",
@@ -87,7 +87,7 @@
         "format-icons": {
             // "Playing": "  ", // Uncomment if not using caway
             "Paused": "  ",
-            "Stopped": "&#x202d;ﭥ " // This stop symbol is RTL. So &#x202d; is left-to-right override.
+            // "Stopped": "&#x202d;ﭥ " // This stop symbol is RTL. So &#x202d; is left-to-right override.
         },
         "escape": true,
         "tooltip": true,
@@ -96,5 +96,12 @@
         "on-click": "playerctl play-pause",
         "on-click-right": "g4music",
         "max-length": 35
-    }
+    },
+
+
+    "custom/swaync": {
+        "format" : "⭘ ",
+        "tooltip": false,
+        "on-click": "swaync-client -t -sw",
+    },
 }

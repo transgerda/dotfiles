@@ -56,6 +56,7 @@ tooltip {
 #battery,
 #pulseaudio,
 #custom-music,
+#custom-swaync,
 #clock {
     color: @foreground;
     margin: 1px 0;
@@ -68,6 +69,7 @@ tooltip {
 #battery:hover,
 #pulseaudio:hover,
 #custom-music:hover,
+#custom-swaync:hover,
 #clock:hover {
     background-color: alpha(@select, 0.6);
 }
@@ -94,7 +96,10 @@ tooltip {
 
 #custom-power {
     margin-left: 10px;
-    padding: 0px 10px 0 15px;
+}
+
+#custom-swaync {
+    margin-right: 10px;
 }
 
 #custom-music {
