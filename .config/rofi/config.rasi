@@ -1,46 +1,58 @@
 /**
- * Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Rofi Theme File
+ * Rofi Version: 1.7.3
  **/
 
 /*****----- Configuration -----*****/
+// @import                          "shared/fonts.rasi"
+* {
+    font: "Iosevka Nerd Font 10";
+}
+
 configuration {
-	modi:                       "run";
+	modi:                       "drun";
     show-icons:                 true;
+    display-drun:               "";
 	drun-display-format:        "{name}";
 }
 
 /*****----- Global Properties -----*****/
-@import                          "~/.config/colors/colors.rasi"
-@import                          "shared/fonts.rasi"
+@import                          "shared/colors.rasi"
 
 /*****----- Main Window -----*****/
 window {
-    /* properties for window widget */
     transparency:                "real";
     location:                    center;
     anchor:                      center;
-    fullscreen:                  false;
-    width:                       750px;
+    fullscreen:                  true;
+    width:                       1366px;
+    height:                      768px;
     x-offset:                    0px;
     y-offset:                    0px;
 
-    /* properties for all widgets */
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border:                      2px solid;
-    border-radius:               15px;
-    border-color:                @foreground;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            black / 10%;
     cursor:                      "default";
-    background-color:            @background;
 }
 
 /*****----- Main Box -----*****/
 mainbox {
     enabled:                     true;
-    spacing:                     10px;
+    spacing:                     100px;
     margin:                      0px;
-    padding:                     20px;
+    padding:                     100px 225px;
+    border:                      0px solid;
+    border-radius:               0px 0px 0px 0px;
+    border-color:                @selected;
     background-color:            transparent;
     children:                    [ "inputbar", "listview" ];
 }
@@ -48,46 +60,43 @@ mainbox {
 /*****----- Inputbar -----*****/
 inputbar {
     enabled:                     true;
-    spacing:                     20px;
-    margin:                      10px 0;
+    spacing:                     10px;
+    margin:                      0% 28%;
     padding:                     10px;
-    // border:			             0px 3px 0px 3px;
-    border-radius:               10px;
-    border-color:		         var(orange);
-    background-color:            @background-alt;
+    border:                      1px solid;
+    border-radius:               6px;
+    border-color:                white / 25%;
+    background-color:            white / 5%;
     text-color:                  @foreground;
-    children:                    [ "textbox-prompt-colon", "entry" ];
+    children:                    [ "prompt", "entry" ];
 }
 
 prompt {
     enabled:                     true;
-    background-color:            inherit;
+    background-color:            transparent;
     text-color:                  inherit;
 }
 textbox-prompt-colon {
     enabled:                     true;
-    padding:                     0px;
     expand:                      false;
-    text-color:                  var(orange);
-    str:                         "Launcher";
-    background-color:            inherit;
+    str:                         "::";
+    background-color:            transparent;
     text-color:                  inherit;
 }
 entry {
     enabled:                     true;
-    padding:                     0px;
-    background-color:            inherit;
+    background-color:            transparent;
     text-color:                  inherit;
     cursor:                      text;
-    placeholder:                 "";
+    placeholder:                 "Search";
     placeholder-color:           inherit;
 }
 
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
-    columns:                     2;
-    lines:                       5;
+    columns:                     7;
+    lines:                       4;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -95,38 +104,74 @@ listview {
     reverse:                     false;
     fixed-height:                true;
     fixed-columns:               true;
-    margin:                      5px 0;
-
-    border:                      0px;
-    spacing:                     10px;
+    
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      "default";
 }
+scrollbar {
+    handle-width:                5px ;
+    handle-color:                @selected;
+    border-radius:               0px;
+    background-color:            @background-alt;
+}
+
 /*****----- Elements -----*****/
 element {
     enabled:                     true;
-    spacing:                     40px;
-    margin:                      0;
-    padding:                     10px 10px 10px 30px;
-    border-radius:               10px;
+    spacing:                     15px;
+    margin:                      0px;
+    padding:                     35px 10px;
+    border:                      0px solid;
+    border-radius:               15px;
+    border-color:                @selected;
     background-color:            transparent;
     text-color:                  @foreground;
+    orientation:                 vertical;
     cursor:                      pointer;
-    text-align:                  center;
 }
-element normal.normal,
-element alternate.normal {
-    background-color:            var(background);
-    text-color:                  var(foreground);
+element normal.normal {
+    background-color:            transparent;
+    text-color:                  @foreground;
 }
 element selected.normal {
-    background-color:            var(selected-background);
-    text-color:                  var(orange);
+    background-color:            white / 5%;
+    text-color:                  @foreground;
 }
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
-    size:                        24px;
+    size:                        72px;
     cursor:                      inherit;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
+/*****----- Message -----*****/
+error-message {
+    padding:                     100px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            black / 10%;
+    text-color:                  @foreground;
+}
+textbox {
+    background-color:            transparent;
+    text-color:                  @foreground;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    highlight:                   none;
 }

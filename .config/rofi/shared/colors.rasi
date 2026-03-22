@@ -10,12 +10,34 @@
 //   urgent: rgba(0, 180, 0, 0.8); /* Adjusted to a more vibrant green */
 // }
 
-* {
-  background: rgba(30, 35, 40, 0.9);
-  background-alt: rgba(25, 30, 35, 0.85);
-  border: rgba(255, 114, 0, 1);
-  foreground: #D1D8E0;
-  selected: rgba(255, 114, 0, 0.9);
-  active: rgba(255, 114, 0, 1);
-  urgent: rgba(255, 87, 34, 1);
-}
+// * {
+//   background: rgba(30, 35, 40, 0.9);
+//   background-alt: rgba(25, 30, 35, 0.85);
+//   border: rgba(255, 114, 0, 1);
+//   foreground: #D1D8E0;
+//   selected: rgba(255, 114, 0, 0.9);
+//   active: rgba(255, 114, 0, 1);
+//   urgent: rgba(255, 87, 34, 1);
+// }
+
+
+
+
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Colors
+ *
+ * Available Colors Schemes
+ *
+ * adapta    catppuccin    everforest    navy       paper
+ * arc       cyberpunk     gruvbox       nord       solarized
+ * black     dracula       lovelace      onedark    yousai
+ *
+ **/
+
+/* Import color-scheme from `colors` directory */
+
+@import "~/.config/colors/tokyonight.rasi"
