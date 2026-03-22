@@ -1,12 +1,21 @@
 /* Colors */
 
-* {
-  background: rgba(26, 38, 27, 0.4); /* Adjusted to a more greenish tint */
-  background-alt: rgba(22, 30, 22, 0.4); /* Adjusted to a more greenish tint */
-  border: rgba(74, 170, 13, 1); /* Updated border color to match the new green tint */
-  foreground: #a0d8a0; /* Changed to a greenish tint */
-  selected: rgba(74, 170, 13, 1); /* Updated to the new color */
-  active: rgba(74, 170, 13, 1); /* Updated to the new color */
-  urgent: rgba(0, 180, 0, 0.8); /* Adjusted to a more vibrant green */
-}
+// * {
+//   background: rgba(26, 38, 27, 0.4); /* Adjusted to a more greenish tint */
+//   background-alt: rgba(22, 30, 22, 0.4); /* Adjusted to a more greenish tint */
+//   border: rgba(74, 170, 13, 1); /* Updated border color to match the new green tint */
+//   foreground: #a0d8a0; /* Changed to a greenish tint */
+//   selected: rgba(74, 170, 13, 1); /* Updated to the new color */
+//   active: rgba(74, 170, 13, 1); /* Updated to the new color */
+//   urgent: rgba(0, 180, 0, 0.8); /* Adjusted to a more vibrant green */
+// }
 
+* {
+  background: rgba(30, 35, 40, 0.9);
+  background-alt: rgba(25, 30, 35, 0.85);
+  border: rgba(255, 114, 0, 1);
+  foreground: #D1D8E0;
+  selected: rgba(255, 114, 0, 0.9);
+  active: rgba(255, 114, 0, 1);
+  urgent: rgba(255, 87, 34, 1);
+}

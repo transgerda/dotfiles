@@ -109,4 +109,7 @@ tooltip {
 #custom-music.Stopped {
     color: @red;
 }
+#custom-music.Stopped {
+    color: transparent;
+}
 
