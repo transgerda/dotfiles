@@ -10,7 +10,7 @@
 /*****----- Configuration -----*****/
 // @import                          "shared/fonts.rasi"
 * {
-    font: "Iosevka Nerd Font 10";
+    font: "JetBrains Mono 12";
 }
 
 configuration {
