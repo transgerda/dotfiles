@@ -3,9 +3,9 @@ set -euo pipefail
 
 # normal settings from hyprland.conf
 NORMAL_BORDER=2
-NORMAL_GAPS_IN=5
-NORMAL_GAPS_OUT=10
-NORMAL_ROUNDING=10
+NORMAL_GAPS_IN=7
+NORMAL_GAPS_OUT=14
+NORMAL_ROUNDING=20
 
 # read current border size
 CURRENT_BORDER="$(
