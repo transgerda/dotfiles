@@ -6,7 +6,7 @@
     "custom/power": {
         "format" : "⭘ ",
         "tooltip": false,
-        "on-click": "wlogout -b 5",
+        "on-click": "wlogout -b 5"
     },
 
     "hyprland/workspaces": {
@@ -14,13 +14,13 @@
         "all-outputs": true,
         "warp-on-scroll": false,
         "format": "{name}",
-        "cursor": true,
+        "cursor": true
     },
 
     "tray": {
         "icon-size": 20,
         "spacing": 10,
-        "cursor": true,
+        "cursor": true
     },
 
     "bluetooth": {
@@ -35,7 +35,7 @@
         "format-ethernet": "  Ethernet",
         "format-linked": "  Linked (No IP)",
         "format-disconnected": "  Disconnected",
-        "tooltip": false,
+        "tooltip": false
     },
 
     "battery": {
@@ -51,7 +51,7 @@
         "format-alt": "{icon} {capacity}%",
         "format-icons": [" ", " ", " ", " ", " "],
         "tooltip-format": "{time}",
-        "cursor": false,
+        "cursor": false
     },
 
     "pulseaudio": {
@@ -63,7 +63,7 @@
             "headphone": " ",
             "headset": " ",
             "default": [" "],
-        },
+        }
         //"on-click": "pavucontrol",
     },
 
@@ -76,17 +76,17 @@
                 "months": "<span color='#F5C2E7'><b>{}</b></span>",
                 "weekdays": "<span color='#89B4FA'><b>{}</b></span>",
                 "days": "<span color='#CDD6F4'><b>{}</b></span>",
-                "today": "<span color='#F9E2AF'><b>{}</b></span>",
+                "today": "<span color='#F9E2AF'><b>{}</b></span>"
             }
         },
-        "on-click": "swaync-client -t -sw",
+        "on-click": "swaync-client -t -sw"
     },
 
     "custom/music": {
         "format": "{icon}{text}",
         "format-icons": {
             // "Playing": "  ", // Uncomment if not using caway
-            "Paused": "  ",
+            "Paused": "  "
             // "Stopped": "&#x202d;ﭥ " // This stop symbol is RTL. So &#x202d; is left-to-right override.
         },
         "escape": true,
@@ -95,13 +95,11 @@
         "return-type": "json",
         "on-click": "playerctl play-pause",
         "on-click-right": "g4music",
-        "max-length": 35
+        "max-length": 25
     },
-
-
     "custom/swaync": {
         "format" : "⭘ ",
         "tooltip": false,
-        "on-click": "swaync-client -t -sw",
-    },
+        "on-click": "swaync-client -t -sw"
+    }
 }

@@ -8,7 +8,7 @@ if pgrep -f "$PROC_NAME" > /dev/null; then
     exit 0
 fi
 
-choice=$(printf "10 CPS Left\n1 CPS Left\n0.1 CPS Left\n10 CPS Right\n1 CPS Right\n0.1 CPS Right" \
+choice=$(printf "10 CPS Left\n100 CPS Left\n1 CPS Left\n0.1 CPS Left\n10 CPS Right\n1 CPS Right\n0.1 CPS Right" \
   | rofi -dmenu -p "Auto Clicker" -theme ~/.config/rofi/global.rasi)
 
 get_delay() {
@@ -38,6 +38,7 @@ start_clicking() {
 
 case "$choice" in
   "10 CPS Left") start_clicking left 10 & ;;
+  "100 CPS Left") start_clicking left 40 & ;;
   "1 CPS Left") start_clicking left 1 & ;;
   "0.1 CPS Left") start_clicking left 0.1 & ;;
   "10 CPS Right") start_clicking right 10 & ;;

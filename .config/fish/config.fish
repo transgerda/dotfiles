@@ -6,7 +6,8 @@ if status is-interactive
     alias lg=lazygit
     alias ptest='composer dump-autoload && php artisan test'
 
-    set -x LD_LIBRARY_PATH /run/current-system/sw/lib $LD_LIBRARY_PATH
+    set -gx DOTNET_ROOT /nix/store/*dotnet-sdk-8.0.416*/share/dotnet
+
     set -x YDOTOOL_SOCKET /run/ydotoold/socket
     set -x EDITOR nvim
     set -g fish_greeting ""
