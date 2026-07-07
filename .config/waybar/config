@@ -82,21 +82,21 @@
         "on-click": "swaync-client -t -sw"
     },
 
-    "custom/music": {
-        "format": "{icon}{text}",
-        "format-icons": {
-            // "Playing": "  ", // Uncomment if not using caway
-            "Paused": "  "
-            // "Stopped": "&#x202d;ﭥ " // This stop symbol is RTL. So &#x202d; is left-to-right override.
-        },
-        "escape": true,
-        "tooltip": true,
-        "exec": "~/.config/waybar/scripts/cava.sh",
-        "return-type": "json",
-        "on-click": "playerctl play-pause",
-        "on-click-right": "g4music",
-        "max-length": 25
-    },
+    // "custom/music": {
+    //     "format": "{icon}{text}",
+    //     "format-icons": {
+    //         // "Playing": "  ", // Uncomment if not using caway
+    //         "Paused": "  "
+    //         // "Stopped": "&#x202d;ﭥ " // This stop symbol is RTL. So &#x202d; is left-to-right override.
+    //     },
+    //     "escape": true,
+    //     "tooltip": true,
+    //     "exec": "~/.config/waybar/scripts/cava.sh",
+    //     "return-type": "json",
+    //     "on-click": "playerctl play-pause",
+    //     "on-click-right": "g4music",
+    //     "max-length": 25
+    // },
     "custom/swaync": {
         "format" : "⭘ ",
         "tooltip": false,
