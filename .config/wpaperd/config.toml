@@ -1,0 +1,5 @@
+[default]
+mode = "fit"
+
+[any]
+path = "/home/martijn/.config/wpaperd/wallpaper.jpg"

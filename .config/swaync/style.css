@@ -1,302 +1,290 @@
+/**
+ * SwayNC style - tokyonight
+ * Palette matches ~/dotfiles/.config/colors/tokyonight.rasi
+ */
+
+@define-color background     #15161Eee;
+@define-color background-alt #1A1B26cc;
+@define-color foreground     #C0CAF5;
+@define-color selected       #33467C;
+@define-color active         #414868;
+@define-color urgent         #F7768E;
+
 * {
+  font-family: "JetBrains Mono", sans-serif;
   font-size: 14px;
-  font-family: "Noto Sans";
-  transition: 100ms;
-  box-shadow: unset;
+  transition: 200ms ease;
 }
 
-.control-center .notification-row {
-  background-color: unset;
+/* GTK4 paints a background on the outer window separately from
+   .control-center / .notification. Left opaque, it fills the whole
+   screen behind your rounded box and hides its corners entirely. */
+.background {
+  background: transparent;
 }
 
-.control-center .notification-row .notification-background .notification,
-.control-center .notification-row .notification-background .notification .notification-content,
-.floating-notifications .notification-row .notification-background .notification,
-.floating-notifications.background .notification-background .notification .notification-content {
-  margin-bottom: unset;
+/* ---------- Notification popups ---------- */
+.notification-row {
+  outline: none;
+  margin: 6px 10px;
 }
 
-.control-center .notification-row .notification-background .notification {
-  margin-top: 0.150rem;
+.notification {
+  background: @background;
+  border: 1px solid @selected;
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 
-.control-center .notification-row .notification-background .notification box,
-.control-center .notification-row .notification-background .notification widget,
-.control-center .notification-row .notification-background .notification .notification-content,
-.floating-notifications .notification-row .notification-background .notification box,
-.floating-notifications .notification-row .notification-background .notification widget,
-.floating-notifications.background .notification-background .notification .notification-content {
-  border: unset;
-  border-radius: 1.159rem;
-  -gtk-outline-radius: 1.159rem;
-  
+.notification-content {
+  padding: 8px;
+  border-radius: 10px;
 }
 
-.floating-notifications.background .notification-background .notification .notification-content,
-.control-center .notification-background .notification .notification-content {
-/*  border-top: 1px solid rgba(164, 162, 167, 0.15);
-  border-left: 1px solid rgba(164, 162, 167, 0.15);
-  border-right: 1px solid rgba(128, 127, 132, 0.15);
-  border-bottom: 1px solid rgba(128, 127, 132, 0.15);*/
-  background-color: #1D1D22;
-  padding: 0.818rem;
-  padding-right: unset;
-  margin-right: unset;
+.notification-default-action {
+  border-radius: 10px;
 }
 
-.control-center .notification-row .notification-background .notification.low .notification-content label,
-.control-center .notification-row .notification-background .notification.normal .notification-content label,
-.floating-notifications.background .notification-background .notification.low .notification-content label,
-.floating-notifications.background .notification-background .notification.normal .notification-content label {
-  color: #c7c5d0;
+.notification-default-action:hover {
+  background: @background-alt;
 }
 
-.control-center .notification-row .notification-background .notification..notification-content image,
-.control-center .notification-row .notification-background .notification.normal .notification-content image,
-.floating-notifications.background .notification-background .notification.low .notification-content image,
-.floating-notifications.background .notification-background .notification.normal .notification-content image {
-  background-color: unset;
-  color: #e2e0f9;
+.close-button {
+  background: @background-alt;
+  color: @foreground;
+  border-radius: 999px;
+  padding: 2px 6px;
+  margin: 6px;
 }
 
-.control-center .notification-row .notification-background .notification.low .notification-content .body,
-.control-center .notification-row .notification-background .notification.normal .notification-content .body,
-.floating-notifications.background .notification-background .notification.low .notification-content .body,
-.floating-notifications.background .notification-background .notification.normal .notification-content .body {
-  color: #92919a;
+.close-button:hover {
+  background: @urgent;
+  color: @background;
 }
 
-.control-center .notification-row .notification-background .notification.critical .notification-content,
-.floating-notifications.background .notification-background .notification.critical .notification-content {
-  background-color: #ffb4a9;
+.notification-icon {
+  border-radius: 8px;
 }
 
-.control-center .notification-row .notification-background .notification.critical .notification-content image,
-.floating-notifications.background .notification-background .notification.critical .notification-content image{
-  background-color: unset;
-  color: #ffb4a9;
+.summary {
+  color: @foreground;
+  font-weight: 700;
+  font-size: 14px;
 }
 
-.control-center .notification-row .notification-background .notification.critical .notification-content label,
-.floating-notifications.background .notification-background .notification.critical .notification-content label {
-  color: #680003;
+.time {
+  color: alpha(@foreground, 0.6);
+  font-size: 11px;
 }
 
-.control-center .notification-row .notification-background .notification .notification-content .summary,
-.floating-notifications.background .notification-background .notification .notification-content .summary {
-  font-family: 'Gabarito', 'Lexend', sans-serif;
-  font-size: 0.9909rem;
-  font-weight: 500;
+.body {
+  color: alpha(@foreground, 0.85);
+  font-size: 13px;
 }
 
-.control-center .notification-row .notification-background .notification .notification-content .time,
-.floating-notifications.background .notification-background .notification .notification-content .time {
-  font-family: 'Geist', 'AR One Sans', 'Inter', 'Roboto', 'Noto Sans', 'Ubuntu', sans-serif;
-  font-size: 0.8291rem;
-  font-weight: 500;
-  margin-right: 1rem;
-  padding-right: unset;
+.image {
+  border-radius: 8px;
 }
 
-.control-center .notification-row .notification-background .notification .notification-content .body,
-.floating-notifications.background .notification-background .notification .notification-content .body {
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 0.8891rem;
-  font-weight: 400;
-  margin-top: 0.310rem;
-  padding-right: unset;
-  margin-right: unset;
+/* urgency accents */
+.notification.critical {
+  border-color: @urgent;
 }
 
-.control-center .notification-row .close-button,
-.floating-notifications.background .close-button {
-  background-color: unset;
-  border-radius: 100%;
-  border: none;
-  box-shadow: none;
-  margin-right: 13px;
-  margin-top: 6px;
-  margin-bottom: unset;
-  padding-bottom: unset;
-  min-height: 20px;
-  min-width: 20px;
-  text-shadow: none;
+.notification.low,
+.notification.normal {
+  border-color: @selected;
 }
 
-.control-center .notification-row .close-button:hover,
-.floating-notifications.background .close-button:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
+/* ---------- Control Center ---------- */
 .control-center {
-  border-radius: 1.705rem;
-  -gtk-outline-radius: 1.705rem;
-  border-top: 1px solid rgba(164, 162, 167, 0.19);
-  border-left: 1px solid rgba(164, 162, 167, 0.19);
-  border-right: 1px solid rgba(128, 127, 132, 0.145);
-  border-bottom: 1px solid rgba(128, 127, 132, 0.145);
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.45);
-  margin: 7px;
-  background-color: #14141B;
-  padding: 1.023rem;
+  background: @background;
+  border: 1px solid @selected;
+  border-radius: 14px;
+  padding: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
-.control-center trough {
-  background-color: #45475a;
-  border-radius: 9999px;
-  -gtk-outline-radius: 9999px;
-  min-width: 0.545rem;
-  background-color: transparent;  
+.control-center-list {
+  background: transparent;
 }
 
-.control-center slider {
-  border-radius: 9999px;
-  -gtk-outline-radius: 9999px;
-  min-width: 0.273rem;
-  min-height: 2.045rem;
-  background-color: rgba(199, 197, 208, 0.31);
+.control-center-list-placeholder {
+  all: unset;
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
 }
 
-.control-center slider:hover {
-  background-color: rgba(199, 197, 208, 0.448);
+.control-center-list-placeholder image,
+.control-center-list-placeholder label {
+  all: unset;
+  min-height: 0;
+  min-width: 0;
+  font-size: 0;
+  -gtk-icon-size: 0;
 }
-
-.control-center slider:active {
-  background-color: #77767e;
-}
-
-/* title widget */
 
 .widget-title {
-  padding: 0.341rem;
-  margin: unset;
+  color: @foreground;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 14px;
 }
 
-.widget-title label {
-  font-family: 'Gabarito', 'Lexend', sans-serif;
-  font-size: 1.364rem;
-  color: #e4e1e6;
-  margin-left: 0.941rem;
+.widget-title > button {
+  background: @background-alt;
+  color: @foreground;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 12px;
 }
 
-.widget-title button {
-  border: unset;
-  background-color: unset;
-  border-radius: 1.159rem;
-  -gtk-outline-radius: 1.159rem;
-  padding: 0.141rem 0.141rem;
-  margin-right: 0.841rem;
+.widget-title > button:hover {
+  background: @selected;
 }
 
-.widget-title button label {
-  font-family: 'Gabarito', sans-serif;
-  font-size: 1.0409rem;
-  color: #e4e1e6;
-  margin-right: 0.841rem;
+.widget-dnd {
+  padding: 6px 14px 14px 14px;
 }
 
-.widget-title button:hover {
-  background-color: rgba(128, 128, 128, 0.3);
+.widget-dnd > switch {
+  background: @background-alt;
+  border-radius: 999px;
+  min-width: 40px;
+  min-height: 22px;
 }
 
-.widget-title button:active {
-  background-color: rgba(128, 128, 128, 0.7);
+.widget-dnd > switch:checked {
+  background: @selected;
 }
 
-/* Buttons widget */
-
-.widget-buttons-grid {
-  border-radius: 1.159rem;
-  -gtk-outline-radius: 1.159rem;
-  padding: 0.341rem;
-  background-color: rgba(28, 28, 34, 0.35);
-  padding: unset;
+.widget-dnd > switch slider {
+  background: @foreground;
+  border-radius: 999px;
+  margin: 2px;
 }
-
-.widget-buttons-grid>flowbox {
-  padding: unset;
-}
-
-.widget-buttons-grid>flowbox>flowboxchild>button:first-child {
-  margin-left:unset ;
-}
-
-.widget-buttons-grid>flowbox>flowboxchild>button {
-  border:none;
-  background-color: unset;
-  border-radius: 9999px;
-  min-width: 5.522rem;
-  min-height: 2.927rem;
-  padding: unset;
-  margin: unset;
-}
-
-.widget-buttons-grid>flowbox>flowboxchild>button label {
-  font-family: "Materials Symbol Rounded";
-  font-size: 1.3027rem;
-  color: #e4e1e6;
-}
-
-.widget-buttons-grid>flowbox>flowboxchild>button:hover {
-  background-color: rgba(128, 128, 128, 0.3);
-}
-
-.widget-buttons-grid>flowbox>flowboxchild>button:checked {
-  /* OnePlus McClaren edition Orange accent */
-  background-color: #ff9f34;
-}
-
-.widget-buttons-grid>flowbox>flowboxchild>button:checked label {
-  color: #14141B;
-}
-
-
-/* Volume widget */
 
 .widget-volume {
-  background-color: rgba(28, 28, 34, 0.35);
+  background: @background-alt;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin: 6px 10px;
+}
+
+.widget-volume > box > label {
+  color: @foreground;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.widget-volume scale {
+  min-height: 16px;
+}
+
+.widget-volume scale trough {
+  background: @background;
+  border-radius: 999px;
+  min-height: 6px;
+}
+
+.widget-volume scale highlight {
+  background: @selected;
+  border-radius: 999px;
+}
+
+.widget-volume scale slider {
+  background: @foreground;
+  border-radius: 999px;
+  min-width: 14px;
+  min-height: 14px;
+  margin: -5px 0;
+}
+
+popover {
+  background: @background-alt;
+  border: 1px solid @selected;
+  border-radius: 10px;
+}
+
+popover contents {
+  background: transparent;
   padding: 8px;
-  margin: 8px;
-  -gtk-outline-radius: 1.159rem;
-  -gtk-outline-radius: 1.159rem;
 }
 
-.widget-volume trough {
-  /* OnePlus McClaren edition Orange accent */
-  border:unset;
-  background-color: rgba(128, 128, 128, 0.4);
+popover label {
+  color: @foreground;
 }
 
-
-.widget-volume trough slider {
-  /* OnePlus McClaren edition Orange accent */
-  color:unset;
-  background-color: #ff9f34;
-  border-radius: 100%;
-  min-height: 1.25rem;
+.per-app-volume {
+  padding: 4px 0;
 }
 
-
-/* Mpris widget */
+.per-app-volume box {
+  padding: 4px 0;
+}
 
 .widget-mpris {
-  background-color: rgba(28, 28, 34, 0.35);
-  padding: 8px;
-  margin: 8px;  
-  border-radius: 1.159rem;
-  -gtk-outline-radius: 1.159rem;  
+  background: @background-alt;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 6px 10px;
 }
 
 .widget-mpris-player {
-  padding: 8px;
-  margin: 8px;
+  padding: 6px;
 }
 
 .widget-mpris-title {
-  font-weight: bold;
-  font-size: 1.25rem;
+  color: @foreground;
+  font-weight: 700;
 }
 
 .widget-mpris-subtitle {
-  font-size: 1.1rem;
+  color: alpha(@foreground, 0.65);
+}
+
+.widget-mpris > button {
+  background: transparent;
+  color: @foreground;
+  border-radius: 999px;
+  padding: 6px;
+}
+
+.widget-mpris > button:hover {
+  background: @selected;
+}
+
+.widget-buttons-grid {
+  padding: 6px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+  background: @background-alt;
+  color: @foreground;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 4px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+  background: @selected;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked {
+  background: @active;
+  color: @foreground;
+}
+
+/* scrollbar to match rofi */
+scrollbar {
+  background: transparent;
+}
+
+scrollbar slider {
+  background: @selected;
+  border-radius: 999px;
+  min-width: 5px;
 }
